@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Api\\ExpenseEngine.Api.csproj": {}
+    "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Worker\\ExpenseEngine.Worker.csproj": {}
   },
   "projects": {
-    "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Api\\ExpenseEngine.Api.csproj": {
+    "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Worker\\ExpenseEngine.Worker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Api\\ExpenseEngine.Api.csproj",
-        "projectName": "ExpenseEngine.Api",
-        "projectPath": "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Api\\ExpenseEngine.Api.csproj",
+        "projectUniqueName": "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Worker\\ExpenseEngine.Worker.csproj",
+        "projectName": "ExpenseEngine.Worker",
+        "projectPath": "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Worker\\ExpenseEngine.Worker.csproj",
         "packagesPath": "C:\\Users\\kijoyin\\.nuget\\packages\\",
-        "outputPath": "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Api\\obj\\",
+        "outputPath": "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Worker\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kijoyin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,13 +40,13 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.14.0, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.2.3, )"
             }
           },
           "imports": [
@@ -60,9 +60,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
