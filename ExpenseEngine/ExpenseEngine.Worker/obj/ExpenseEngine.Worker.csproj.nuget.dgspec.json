@@ -4,14 +4,86 @@
     "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Worker\\ExpenseEngine.Worker.csproj": {}
   },
   "projects": {
-    "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Worker\\ExpenseEngine.Worker.csproj": {
+    "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Core\\ExpenseEngine.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Worker\\ExpenseEngine.Worker.csproj",
-        "projectName": "ExpenseEngine.Worker",
-        "projectPath": "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Worker\\ExpenseEngine.Worker.csproj",
+        "projectUniqueName": "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Core\\ExpenseEngine.Core.csproj",
+        "projectName": "ExpenseEngine.Core",
+        "projectPath": "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Core\\ExpenseEngine.Core.csproj",
         "packagesPath": "C:\\Users\\kijoyin\\.nuget\\packages\\",
-        "outputPath": "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Worker\\obj\\",
+        "outputPath": "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\kijoyin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Domain\\ExpenseEngine.Domain.csproj": {
+                "projectPath": "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Domain\\ExpenseEngine.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[27.2.1, )"
+            },
+            "InfluxDB.Client": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Domain\\ExpenseEngine.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Domain\\ExpenseEngine.Domain.csproj",
+        "projectName": "ExpenseEngine.Domain",
+        "projectPath": "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Domain\\ExpenseEngine.Domain.csproj",
+        "packagesPath": "C:\\Users\\kijoyin\\.nuget\\packages\\",
+        "outputPath": "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kijoyin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +112,89 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.4, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Worker\\ExpenseEngine.Worker.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Worker\\ExpenseEngine.Worker.csproj",
+        "projectName": "ExpenseEngine.Worker",
+        "projectPath": "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Worker\\ExpenseEngine.Worker.csproj",
+        "packagesPath": "C:\\Users\\kijoyin\\.nuget\\packages\\",
+        "outputPath": "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Worker\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\kijoyin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Core\\ExpenseEngine.Core.csproj": {
+                "projectPath": "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Core\\ExpenseEngine.Core.csproj"
+              },
+              "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Domain\\ExpenseEngine.Domain.csproj": {
+                "projectPath": "E:\\Code\\ExpenseEngine\\ExpenseEngine\\ExpenseEngine.Domain\\ExpenseEngine.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.4, )"
+            },
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
               "version": "[6.0.1, )"
@@ -47,6 +202,10 @@
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.14.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[6.0.4, )"
             }
           },
           "imports": [

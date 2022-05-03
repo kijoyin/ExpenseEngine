@@ -1,0 +1,14 @@
+E:\Code\ExpenseEngine\ExpenseEngine\ExpenseEngine.Domain\bin\Debug\net6.0\ExpenseEngine.Domain.deps.json
+E:\Code\ExpenseEngine\ExpenseEngine\ExpenseEngine.Domain\bin\Debug\net6.0\ExpenseEngine.Domain.runtimeconfig.json
+E:\Code\ExpenseEngine\ExpenseEngine\ExpenseEngine.Domain\bin\Debug\net6.0\ExpenseEngine.Domain.dll
+E:\Code\ExpenseEngine\ExpenseEngine\ExpenseEngine.Domain\bin\Debug\net6.0\ExpenseEngine.Domain.pdb
+E:\Code\ExpenseEngine\ExpenseEngine\ExpenseEngine.Domain\obj\Debug\net6.0\ExpenseEngine.Domain.csproj.AssemblyReference.cache
+E:\Code\ExpenseEngine\ExpenseEngine\ExpenseEngine.Domain\obj\Debug\net6.0\ExpenseEngine.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\Code\ExpenseEngine\ExpenseEngine\ExpenseEngine.Domain\obj\Debug\net6.0\ExpenseEngine.Domain.AssemblyInfoInputs.cache
+E:\Code\ExpenseEngine\ExpenseEngine\ExpenseEngine.Domain\obj\Debug\net6.0\ExpenseEngine.Domain.AssemblyInfo.cs
+E:\Code\ExpenseEngine\ExpenseEngine\ExpenseEngine.Domain\obj\Debug\net6.0\ExpenseEngine.Domain.csproj.CoreCompileInputs.cache
+E:\Code\ExpenseEngine\ExpenseEngine\ExpenseEngine.Domain\obj\Debug\net6.0\ExpenseEngine.Domain.dll
+E:\Code\ExpenseEngine\ExpenseEngine\ExpenseEngine.Domain\obj\Debug\net6.0\refint\ExpenseEngine.Domain.dll
+E:\Code\ExpenseEngine\ExpenseEngine\ExpenseEngine.Domain\obj\Debug\net6.0\ExpenseEngine.Domain.pdb
+E:\Code\ExpenseEngine\ExpenseEngine\ExpenseEngine.Domain\obj\Debug\net6.0\ExpenseEngine.Domain.genruntimeconfig.cache
+E:\Code\ExpenseEngine\ExpenseEngine\ExpenseEngine.Domain\obj\Debug\net6.0\ref\ExpenseEngine.Domain.dll
