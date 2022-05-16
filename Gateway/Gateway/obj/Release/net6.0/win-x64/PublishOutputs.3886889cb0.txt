@@ -1,0 +1,5 @@
+E:\Code\ExpenseEngine\Gateway\Gateway\obj\Release\net6.0\win-x64\PubTmp\Out\appsettings.Development.json
+E:\Code\ExpenseEngine\Gateway\Gateway\obj\Release\net6.0\win-x64\PubTmp\Out\appsettings.json
+E:\Code\ExpenseEngine\Gateway\Gateway\obj\Release\net6.0\win-x64\PubTmp\Out\Gateway.pdb
+E:\Code\ExpenseEngine\Gateway\Gateway\obj\Release\net6.0\win-x64\PubTmp\Out\aspnetcorev2_inprocess.dll
+E:\Code\ExpenseEngine\Gateway\Gateway\obj\Release\net6.0\win-x64\PubTmp\Out\Gateway.exe
