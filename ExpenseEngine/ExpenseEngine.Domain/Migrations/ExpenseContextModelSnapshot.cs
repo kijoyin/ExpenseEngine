@@ -56,6 +56,9 @@ namespace ExpenseEngine.Domain.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Description")
+                        .IsUnique();
+
                     b.ToTable("Expenses");
                 });
 #pragma warning restore 612, 618

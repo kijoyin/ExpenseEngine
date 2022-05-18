@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace ExpenseEngine.Domain
 {
+    // Comment constructor
+    // Uncomment Onconfiguring
+    // dotnet ef migrations add "description-unique"
+    // dotnet ef database update
     public class ExpenseContext : DbContext
     {
         public ExpenseContext(DbContextOptions<ExpenseContext> options) : base(options)
@@ -20,6 +24,9 @@ namespace ExpenseEngine.Domain
             modelBuilder.Entity<ExpenseEntity>()
                 .Property(b => b.Created)
                 .ValueGeneratedOnAdd();
+            modelBuilder.Entity<ExpenseEntity>()
+                   .HasIndex(u => u.Description)
+                   .IsUnique();
         }
 
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

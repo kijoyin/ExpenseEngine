@@ -20,15 +20,21 @@ namespace ExpenseEngine.Core.Services
         }
         public async Task ReadStatement()
         {
-            using (var reader = new StreamReader("C:\\Users\\kijoyin\\Downloads\\Transactions (3).csv"))
+            using (var reader = new StreamReader("C:\\Users\\kijoyin\\Downloads\\Transactions.csv"))
             using (var csv = new CsvReader(reader, CultureInfo.GetCultureInfo("en-AU")))
             {
                 csv.Context.RegisterClassMap<ExpenseEntityMap>();
                 var records = csv.GetRecords<ExpenseEntity>();
-                await _context.AddRangeAsync(records);
+                foreach (var record in records)
+                {
+                    if(_context.Expenses.FirstOrDefault(e => e.Description == record.Description) == null)
+                    {
+                        await _context.AddAsync(record);
+                    }
+                }
                 _context.SaveChanges();
             }
-        }
+         }
     }
     public class ExpenseEntityMap : ClassMap<ExpenseEntity>
     {

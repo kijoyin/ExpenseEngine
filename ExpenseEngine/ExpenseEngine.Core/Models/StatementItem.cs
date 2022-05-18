@@ -10,6 +10,8 @@ namespace ExpenseEngine.Core.Models
     {
         public string Description { get; set; }
         public double Debit { get; set; }
+        public double Credit { get; set; }
+        public double Balance { get; set; }
         public DateTime Date { get; set; }
     }
 }
