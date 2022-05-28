@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ExpenseEngine.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -18,6 +19,8 @@ namespace ExpenseEngine.Domain
         {
         }
         public DbSet<ExpenseEntity> Expenses { get; set; }
+        public DbSet<TagRuleEntity> TagRules { get; set; }
+        //public DbSet<Match> Matches { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -27,6 +30,16 @@ namespace ExpenseEngine.Domain
             modelBuilder.Entity<ExpenseEntity>()
                    .HasIndex(u => u.Description)
                    .IsUnique();
+            modelBuilder.Entity<TagRuleEntity>()
+                .Property(b => b.Created)
+                .ValueGeneratedOnAdd();
+            modelBuilder.Entity<TagRuleEntity>()
+                   .HasIndex(u => u.Tag)
+                   .IsUnique();
+            modelBuilder.Entity<TagRuleEntity>()
+                .Property(b => b.Id)
+                .ValueGeneratedOnAdd();
+
         }
 
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

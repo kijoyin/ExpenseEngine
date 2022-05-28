@@ -12,6 +12,7 @@ IHost host = Host.CreateDefaultBuilder(args)
         services.AddDbContext<ExpenseContext>(options =>
             options.UseNpgsql(configuration.GetConnectionString("ExpenseContext")));
         services.AddScoped<IExpenseReaderService, ExpenseReaderService>();
+        services.AddScoped<ITaggingService, TaggingService>();
     })
     .Build();
 

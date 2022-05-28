@@ -14,9 +14,13 @@ namespace ExpenseEngine.Core.Services
     public class ExpenseReaderService : IExpenseReaderService
     {
         private readonly ExpenseContext _context;
-        public ExpenseReaderService(ExpenseContext context)
+        private readonly ITaggingService _taggingService;
+
+        public ExpenseReaderService(ExpenseContext context,
+            ITaggingService taggingService)
         {
             _context = context;
+            _taggingService = taggingService;
         }
         public async Task ReadStatement()
         {
@@ -29,6 +33,8 @@ namespace ExpenseEngine.Core.Services
                 {
                     if(_context.Expenses.FirstOrDefault(e => e.Description == record.Description) == null)
                     {
+                        record.Tags = new List<Domain.Entities.TagRuleEntity>();
+                        record.Tags.AddRange(await _taggingService.GetTags(record.Description));
                         await _context.AddAsync(record);
                     }
                 }
