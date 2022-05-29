@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpenseEngine.Core", "Expen
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpenseEngine.Domain", "ExpenseEngine.Domain\ExpenseEngine.Domain.csproj", "{1A61A3D0-985B-42C4-B755-193DA933C473}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseEngine.UI", "ExpenseEngine.UI\ExpenseEngine.UI.csproj", "{C9611B9E-FF54-4E7D-A95B-0CEF664E2373}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpenseEngine.UI", "ExpenseEngine.UI\ExpenseEngine.UI.csproj", "{C9611B9E-FF54-4E7D-A95B-0CEF664E2373}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
