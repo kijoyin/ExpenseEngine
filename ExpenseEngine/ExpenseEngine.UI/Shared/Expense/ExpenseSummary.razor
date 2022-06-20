@@ -1,0 +1,41 @@
+﻿@using ExpenseEngine.Core.Models
+@using System.Globalization
+@inject HttpClient Http
+
+
+@if (Expenses == null)
+{
+    <FluentProgress></FluentProgress>
+}
+else
+{
+    <div class="row">
+        @foreach (var expense in Expenses.OrderByDescending(x => x.Year).ThenByDescending(x => x.Month).Take(6))
+        {
+            <div class="col-sm-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">@expense.ToMonthString()</h5>
+                        <p class="card-text">@expense.TotalAmount.ToString("C",CultureInfo.CurrentCulture)</p>
+                        <a class="btn btn-primary" @onclick="@(() => ShowTransactions(expense))">Show transactions</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+<ExpenseTransactions MonthExpense="selectedMonthExpense"></ExpenseTransactions>
+@code {
+    [Parameter]
+    public MonthlyExpense[]? Expenses { get; set; }
+    private MonthlyExpense selectedMonthExpense;
+    protected override void OnInitialized()
+    {
+        selectedMonthExpense = Expenses?.FirstOrDefault();
+    }
+
+    private void ShowTransactions(MonthlyExpense selected)
+    {
+        selectedMonthExpense = selected;
+    }
+}

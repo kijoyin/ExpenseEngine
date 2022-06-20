@@ -13,3 +13,5 @@ E:\Code\ExpenseEngine\ExpenseEngine\ExpenseEngine.Core\obj\Debug\net6.0\ref\Expe
 E:\Code\ExpenseEngine\ExpenseEngine\ExpenseEngine.Core\bin\Debug\net6.0\ExpenseEngine.Domain.dll
 E:\Code\ExpenseEngine\ExpenseEngine\ExpenseEngine.Core\bin\Debug\net6.0\ExpenseEngine.Domain.pdb
 E:\Code\ExpenseEngine\ExpenseEngine\ExpenseEngine.Core\obj\Debug\net6.0\ExpenseEngine.Core.csproj.CopyComplete
+E:\Code\ExpenseEngine\ExpenseEngine\ExpenseEngine.Core\bin\Debug\net6.0\ExpenseEngine.Core.runtimeconfig.json
+E:\Code\ExpenseEngine\ExpenseEngine\ExpenseEngine.Core\obj\Debug\net6.0\ExpenseEngine.Core.genruntimeconfig.cache

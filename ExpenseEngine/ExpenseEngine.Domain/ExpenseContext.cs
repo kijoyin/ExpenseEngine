@@ -20,7 +20,7 @@ namespace ExpenseEngine.Domain
         }
         public DbSet<ExpenseEntity> Expenses { get; set; }
         public DbSet<TagRuleEntity> TagRules { get; set; }
-        //public DbSet<Match> Matches { get; set; }
+        public DbSet<BankEntity> Banks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -28,7 +28,7 @@ namespace ExpenseEngine.Domain
                 .Property(b => b.Created)
                 .ValueGeneratedOnAdd();
             modelBuilder.Entity<ExpenseEntity>()
-                   .HasIndex(u => u.Description)
+                   .HasIndex(u => u.UniqueKey)
                    .IsUnique();
             modelBuilder.Entity<TagRuleEntity>()
                 .Property(b => b.Created)

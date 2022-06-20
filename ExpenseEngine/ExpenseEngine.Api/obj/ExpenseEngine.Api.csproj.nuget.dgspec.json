@@ -129,6 +129,10 @@
               "target": "Package",
               "version": "[27.2.1, )"
             },
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
             "InfluxDB.Client": {
               "target": "Package",
               "version": "[4.0.0, )"

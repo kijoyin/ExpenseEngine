@@ -23,6 +23,33 @@ namespace ExpenseEngine.Domain.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("ExpenseEngine.Domain.Entities.BankEntity", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("Updated")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Banks");
+                });
+
             modelBuilder.Entity("ExpenseEngine.Domain.Entities.TagRuleEntity", b =>
                 {
                     b.Property<Guid>("Id")
@@ -67,6 +94,9 @@ namespace ExpenseEngine.Domain.Migrations
                     b.Property<decimal>("Amount")
                         .HasColumnType("numeric");
 
+                    b.Property<Guid>("BankId")
+                        .HasColumnType("uuid");
+
                     b.Property<DateTime>("Created")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("timestamp with time zone");
@@ -84,6 +114,10 @@ namespace ExpenseEngine.Domain.Migrations
                     b.Property<DateOnly>("SpendOn")
                         .HasColumnType("date");
 
+                    b.Property<string>("UniqueKey")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<DateTime?>("Updated")
                         .HasColumnType("timestamp with time zone");
 
@@ -92,7 +126,9 @@ namespace ExpenseEngine.Domain.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Description")
+                    b.HasIndex("BankId");
+
+                    b.HasIndex("UniqueKey")
                         .IsUnique();
 
                     b.ToTable("Expenses");
@@ -111,6 +147,17 @@ namespace ExpenseEngine.Domain.Migrations
                     b.HasIndex("TagsId");
 
                     b.ToTable("ExpenseEntityTagRuleEntity");
+                });
+
+            modelBuilder.Entity("ExpenseEngine.Domain.ExpenseEntity", b =>
+                {
+                    b.HasOne("ExpenseEngine.Domain.Entities.BankEntity", "Bank")
+                        .WithMany()
+                        .HasForeignKey("BankId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Bank");
                 });
 
             modelBuilder.Entity("ExpenseEntityTagRuleEntity", b =>

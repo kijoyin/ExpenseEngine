@@ -1,0 +1,40 @@
+﻿@using ExpenseEngine.Core.Models
+@if(MonthExpense == null)
+{
+
+}
+else
+{
+    <h5 class="mt-5">@MonthExpense.ToMonthString()</h5>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Amount (AUD)</th>
+                <th>Tags</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var expense in MonthExpense.Expenses.OrderBy(e=>e.Amount))
+            {
+                <tr>
+                    <td>@expense.SpendOn.ToString("dd/MM/yyyy")</td>
+                    <td>@expense.Description</td>
+                    <td>@expense.Amount</td>
+                    <td>
+                        @foreach (var tag in expense.Tags)
+                        {
+                            <FluentBadge Fill=Fill.Lowlight Color=Color.Highlight>@tag</FluentBadge>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    [Parameter]
+    public MonthlyExpense? MonthExpense { get; set; }
+}

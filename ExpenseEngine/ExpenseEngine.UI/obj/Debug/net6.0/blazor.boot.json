@@ -8,6 +8,8 @@
   "resources": {
     "assembly": {
       "CsvHelper.dll": "sha256-C4tsA83oB+MBNtP8l59LBwoVfNHIUlOQRsJXdSktBuk=",
+      "EntityFramework.SqlServer.dll": "sha256-vivNycD\/SihlyOUpb2o8h8IkEf8mjl7\/MP3PX4slYeI=",
+      "EntityFramework.dll": "sha256-6tusYE7+HqAnLRKF9I41hUGXiqHRmO8EILDlIseTuLQ=",
       "InfluxDB.Client.dll": "sha256-kchEOpPmD0SJYXAf+CLghhmu2ehyaj6wNwVqYL9BqCI=",
       "InfluxDB.Client.Core.dll": "sha256-hBwLQ4XZHnRBNQeucrhpi7Dmp6O4E1er\/f+dAVdWsAc=",
       "JsonSubTypes.dll": "sha256-3EMOEdJwDGyRA72Jn6PKQEG3tpZgD++UP2x9b+J6bW8=",
@@ -48,7 +50,9 @@
       "Npgsql.dll": "sha256-VZKrjKPpLAv2BeegPz5Zq4wlGTYwQuLYANtbb9ofIU0=",
       "Npgsql.EntityFrameworkCore.PostgreSQL.dll": "sha256-jYZBasTbBv\/qYG7UkpTfyvCnjvdKKYdFfH1QlhXurKU=",
       "RestSharp.dll": "sha256-2FlqM0f\/QGrqsbSnQ8mwzprrCD9WaDHfrYJSj0gdtuY=",
+      "System.CodeDom.dll": "sha256-FwTliQ0DZdjsM2pGhbBJ8+N11S\/RuTn8r3AcBpSaWfI=",
       "System.Configuration.ConfigurationManager.dll": "sha256-SyZcn69Ju8196bOWd6jbATVgq2B2BRWvy5adNMTwGUE=",
+      "System.Data.SqlClient.dll": "sha256-DHtY+dJ7Jexc\/M4jndGQiJ0Xpxdjm1ULhCAa0jng4X0=",
       "System.Drawing.Common.dll": "sha256-mNB+ax59NkGoYIo2Cz3Cc\/6KD3iSa24eX2eaegdNSR8=",
       "System.IO.Pipelines.dll": "sha256-6+E55JXedimdw1c1bDtVg4K7XuWjVWVTifH8QpfzXSY=",
       "System.Reactive.dll": "sha256-K2wx37H8YBmkKgB+0OXgBXTebqDEf+0MooK\/O7J3Gww=",
@@ -221,9 +225,9 @@
       "mscorlib.dll": "sha256-ghlJNtzzYlKIliGPuf0A0Yu6dmLycSx3F9uyeddFb\/g=",
       "netstandard.dll": "sha256-qpOz\/RBwhlIYfaE2GDEmjiproxkvSf2b9GeqHxvH+lg=",
       "System.Private.CoreLib.dll": "sha256-sfzSZ3YKC2rpF77TVOKLuPgQag93QXr9U4AUc9d\/LKA=",
-      "ExpenseEngine.Core.dll": "sha256-Dvq+BVqCaZt2JQLvNndXW9v5ruPjaI\/I74gKFT78PPc=",
-      "ExpenseEngine.Domain.dll": "sha256-dzpZ+2AnMYajHgOs8H0NLF6cca1mwoDyxiRqt5Xj2tA=",
-      "ExpenseEngine.UI.dll": "sha256-xB2jca4\/jAStjTqJnzLePMRfBJ7ERUSozDELQ15FGSk="
+      "ExpenseEngine.Core.dll": "sha256-nAwwOk8OG1rDT7MoIQZrExJr\/uU0IFrY7st14qCWBIs=",
+      "ExpenseEngine.Domain.dll": "sha256-2unrXpsAOv1CQpH+Bc733BxLS0g6iA5Wz4lodBcfsuw=",
+      "ExpenseEngine.UI.dll": "sha256-omKw81yPVITZW5RVMyBnyy0eUz4UAEVoaZ2n0gWrv0M="
     },
     "extensions": null,
     "lazyAssembly": null,
@@ -231,9 +235,9 @@
       "_content\/Microsoft.Fast.Components.FluentUI\/Microsoft.Fast.Components.FluentUI.lib.module.js": "sha256-Nb\/AiZ7XJoK2LbSQyUkf\/+U1gmRSLSd0NWh7JYvFEb8="
     },
     "pdb": {
-      "ExpenseEngine.Core.pdb": "sha256-haU\/YPX++wW362juiRHHIc\/nVWwu1XXprrbnqV+ueq4=",
-      "ExpenseEngine.Domain.pdb": "sha256-l8ANleumQ36JgoZmO9Rzn92bGzZmbejqaM1ArmeVWto=",
-      "ExpenseEngine.UI.pdb": "sha256-f45ZEoQs2WL0a2z1qb4rdHV+W6cPpsznE4pPgPovIzU="
+      "ExpenseEngine.Core.pdb": "sha256-e7BwnOFfZPZnJtFpN1oJJFjvntyTuX84YTFktuJ6QlU=",
+      "ExpenseEngine.Domain.pdb": "sha256-rAoQx5DGWM3xOcvUr7jIGUAWp6bKGhn88u0VaHxxDjM=",
+      "ExpenseEngine.UI.pdb": "sha256-kFw3UtGMeDXWveZzAV9KgoJEFRIH+9gzI9ai1KqKg2s="
     },
     "runtime": {
       "dotnet.6.0.5.8zu36575r1.js": "sha256-783uOt0jgblQfP6Yz5TJeuW2xxtl6UHZQPngZtCz79U=",

@@ -1,51 +1,29 @@
 ﻿@page "/expenses"
 @using ExpenseEngine.Core.Models
+@using ExpenseEngine.UI.Shared.Expense
 @inject HttpClient Http
 
 <PageTitle>Expenses</PageTitle>
 
 <h1>Expenses</h1>
 
-
-@if (expenses == null)
+<div class="row-cols-1 h-100 overflow-scroll">
+@if (expenses == null || selectedMonthExpense == null)
 {
     <FluentProgress></FluentProgress>
 }
 else
 {
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Description</th>
-                <th>Amount (AUD)</th>
-                <th>Tags</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var expense in expenses)
-            {
-                <tr>
-                    <td>@expense.SpendOn.ToShortDateString()</td>
-                    <td>@expense.Description</td>
-                    <td>@expense.Amount</td>
-                    <td>
-                        @foreach(var tag in expense.Tags)
-                        {
-                            <FluentBadge Fill=Fill.Lowlight Color=Color.Highlight>@tag</FluentBadge>
-                        }
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
+    <ExpenseSummary Expenses="@expenses"></ExpenseSummary>
 }
-
+</div>
 @code {
-    private Expense[]? expenses;
+    private MonthlyExpense[]? expenses;
+    private MonthlyExpense? selectedMonthExpense;
 
     protected override async Task OnInitializedAsync()
     {
-        expenses = await Http.GetFromJsonAsync<Expense[]>("api/v1/Expense");
+        expenses = (await Http.GetFromJsonAsync<MonthlyExpense[]>("api/v1/Expense/monthly"))?.OrderByDescending(x => x.Year).ThenByDescending(x => x.Month).ToArray();
+        selectedMonthExpense = expenses?.FirstOrDefault();
     }
 }

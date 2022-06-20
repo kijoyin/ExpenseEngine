@@ -38,6 +38,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudHNcQmFkZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Code/ExpenseEngine/ExpenseEngine/ExpenseEngine.UI/Shared/Expense/ExpenseSummary.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEV4cGVuc2VcRXhwZW5zZVN1bW1hcnkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Code/ExpenseEngine/ExpenseEngine/ExpenseEngine.UI/Shared/Expense/ExpenseTransactions.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEV4cGVuc2VcRXhwZW5zZVRyYW5zYWN0aW9ucy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Code/ExpenseEngine/ExpenseEngine/ExpenseEngine.UI/Shared/SideBar.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFNpZGVCYXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

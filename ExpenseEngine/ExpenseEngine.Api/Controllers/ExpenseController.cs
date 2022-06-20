@@ -22,6 +22,11 @@ namespace ExpenseEngine.Api.Controllers
         {
             return await _expenseService.GetExpenses();
         }
+        [HttpGet("monthly")]
+        public async Task<IEnumerable<MonthlyExpense>> GetMonthly()
+        {
+            return await _expenseService.GetMonthlyExpenses();
+        }
 
         // GET api/<ExpenseController>/5
         [HttpGet("{id}")]

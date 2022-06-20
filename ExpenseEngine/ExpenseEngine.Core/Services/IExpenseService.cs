@@ -5,5 +5,6 @@ namespace ExpenseEngine.Core.Services
     public interface IExpenseService
     {
         Task<IEnumerable<Expense>> GetExpenses();
+        Task<List<MonthlyExpense>> GetMonthlyExpenses();
     }
 }
